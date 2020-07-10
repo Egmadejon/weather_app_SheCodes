@@ -1,0 +1,57 @@
+body {
+  min-width: 100%;
+  height: auto;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+header {
+  padding: 40px;
+  background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+  max-width: 100%;
+}
+
+section {
+  text-align: center;
+  margin: auto;
+  height: auto;
+}
+.current-city {
+  font-size: 60px;
+  padding: 20px;
+}
+.temperature {
+  font-size: 65px;
+  padding: 0px;
+  margin: auto;
+  color: #3c4245;
+}
+.temperature:hover {
+  color: black;
+}
+
+.hourly-weather {
+  position: relative;
+  display:block;
+  max-width:100%;
+  margin:0 auto;
+  bottom: 10;
+  left:400;
+  right: 0;
+}
+}
+.following-days-weather {
+ display: inline-block;
+  margin: 0 auto;
+  height: auto;
+  position: relative;
+  width: 100%;
+  left: 40px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.following-days-weather:hover {
+  cursor: pointer;
+  margin-bottom: 10px;
+  max-width: 100%;
+}

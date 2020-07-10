@@ -1,0 +1,121 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>🌦WeatherApp</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+        <form id="search-form">
+          <input
+            type="text"
+            placeholder="Search for a city 🔍"
+            autocomplete ="off"
+            autofocus ="on"
+          id ="search-engine"
+          required/>
+          <input type ="submit" value = "Search"/>
+          </form>
+          <button type="button" id="current-location-button" class="btn btn-primary btn-sm">Current location 🌎</button>
+    </header>
+    <section class="current-city-temperature">
+      <h1 class="current-city" id="current-city">
+        Opfikon
+      </h1>
+      <p id="current-day">monday, 8th June</p>
+      <h2 class="temperature" id ="temperature">
+          19°C🌧 </h2>  
+          <a id= "celsius" href="index.html" target="_blank">C</a>/ <a id = "farenheit" href="index.html" target="_blank">F</a>
+    
+</section>
+<br /> <br />
+			
+      <div class="hourly-weather">
+          <div class="container">
+        <div class="row">
+            <span class="border-right">
+            <div class="col-3">
+                <p>Now</p>
+                <h1><strong>19°</strong></h1>
+                <h1>🌧</h1>
+                <p>💧<strong>55%</strong></p>
+            </div>
+            </span>
+            <span class="border-right">
+            <div class="col-3">
+                <p>6pm</p>
+                <h1>18°</h1>
+                <h1>🌧</h1>
+                <p>💧55%</p>
+        
+            </div>
+						</span>
+
+            <span class="border-right">
+            <div class="col-3">
+                <p>7pm</p>
+                <h1>17°</h1>
+                <h1>☁️</h1>
+                <p>💧20%</p>
+
+            </div>
+            </span>
+            <div class="col-3">
+            <p>8pm</p>
+            <h1>17°</h1>
+            <h1>☁️</h1>
+            <p>💧<br/> 20%</p>
+            </div>
+        </div>
+          </div>
+				</div>
+        <footer class="following-days-weather"> <br />
+            <div class="card-deck">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Tuesday 9th</h5>
+                        <h1 class="card-text">🌧</h1>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                    <h5 class="card-title">Wednesday 10th</h5>
+                    <h1 class="card-text">🌧</h1>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Thursday 11th</h5>
+                        <h1 class="card-text">🌧</h1>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Friday 12th</h5>
+                        <h1 class="card-text">🌧</h1>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Saturday 13th</h5>
+                        <h1 class="card-text">🌧</h1>
+                    </div>
+                </div>
+            </div>
+            <p>Open-source coded by <a href="https://github.com/Egmadejon/weather_app_SheCodes" target_blank>Elena Guerrero</a></p>
+            </div>     
+        </footer>
+        
+        <script src="src/index.js"></script>
+
+      
+  </body>
+</html>
