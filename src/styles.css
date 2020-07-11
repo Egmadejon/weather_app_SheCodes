@@ -29,13 +29,22 @@ section {
   color: black;
 }
 
+.hourly-weather {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  bottom: 10;
+  left: 400;
+  right: 0;
+}
+
 .following-days-weather {
   display: inline-block;
   margin: 0 auto;
   height: auto;
   position: relative;
   width: 100%;
-  left: 40px;
   text-align: center;
   padding-bottom: 40px;
 }

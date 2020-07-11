@@ -11,82 +11,92 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
-      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <header>
-        <form id="search-form">
-          <input
-            type="text"
-            placeholder="Search for a city 🔍"
-            autocomplete ="off"
-            autofocus ="on"
-          id ="search-engine"
-          required/>
-          <input type ="submit" value = "Search"/>
-          </form>
-          <button type="button" id="current-location-button" class="btn btn-primary btn-sm">Current location 🌎</button>
+      <form id="search-form">
+        <input
+          type="text"
+          placeholder="Search for a city 🔍"
+          autocomplete="off"
+          autofocus="on"
+          id="search-engine"
+          required
+        />
+        <input type="submit" value="Search" />
+      </form>
+      <button
+        type="button"
+        id="current-location-button"
+        class="btn btn-primary btn-sm"
+      >
+        Current location 🌎
+      </button>
     </header>
     <section class="current-city-temperature">
       <h1 class="current-city" id="current-city">
         <i class="fas fa-frog"></i> ...
-
-
       </h1>
       <p id="current-day">monday, 8th June</p>
-      <h2 class="temperature" id ="temperature">
+      <h2 class="temperature" id="temperature">
         -
-          </h2>  
-    
-</section>
-<br /> <br />
-			<div class= otherInformation>
-      <ul class="list-group list-group-horizontal">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Morbi leo risus</li>
-      </ul>
-      </div>
-        <footer class="following-days-weather"> <br />
-            <div class="card-deck">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Tuesday 9th</h5>
-                        <h1 class="card-text">🌧</h1>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                    <h5 class="card-title">Wednesday 10th</h5>
-                    <h1 class="card-text">🌧</h1>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Thursday 11th</h5>
-                        <h1 class="card-text">🌧</h1>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Friday 12th</h5>
-                        <h1 class="card-text">🌧</h1>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Saturday 13th</h5>
-                        <h1 class="card-text">🌧</h1>
-                    </div>
-                </div>
-            </div>
-            <p>Open-source coded by <a href="https://github.com/Egmadejon/weather_app_SheCodes" target_blank>Elena Guerrero</a></p>
-            </div>     
-        </footer>
-        
-        <script src="src/index.js"></script>
+      </h2>
+    </section>
+    <br />
+    <br />
 
-      
+    <footer class="following-days-weather">
+      <br />
+      <div class="card-deck">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Feels like</h5>
+            <h1 class="card-text">🌧</h1>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Humidity</h5>
+            <h1 class="card-text">💧</h1>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Max</h5>
+            <h1 class="card-text">🥵</h1>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Min</h5>
+            <h1 class="card-text">🥶</h1>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Wind</h5>
+            <h1 class="card-text">🌬</h1>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p>
+          Open-source coded by
+          <a
+            href="https://github.com/Egmadejon/weather_app_SheCodes"
+            target_blank
+            >Elena Guerrero</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="src/index.js"></script>
   </body>
 </html>
