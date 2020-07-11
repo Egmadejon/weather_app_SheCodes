@@ -28,23 +28,14 @@ section {
 .temperature:hover {
   color: black;
 }
-
-.hourly-weather {
-  position: relative;
-  display: block;
-  max-width: 100%;
-  margin: 0 auto;
-  bottom: 10;
-  left: 400;
-  right: 0;
-}
-
 .following-days-weather {
   display: inline-block;
   margin: 0 auto;
   height: auto;
   position: relative;
   width: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
   text-align: center;
   padding-bottom: 40px;
 }
