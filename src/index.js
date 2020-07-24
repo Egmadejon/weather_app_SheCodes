@@ -19,7 +19,7 @@ if (minutes < 10) {
   minutes = `${minutes}`;
 }
 displayingDate.innerHTML = `${day} ${hour}:${minutes}`;
-
+//defaul day (zurich city)
 //form
 function changeCity(event) {
   event.preventDefault();
@@ -36,8 +36,23 @@ form.addEventListener("submit", changeCity);
 function showTemp(response) {
   let temperatureNow = document.querySelector("#temperature");
   let temperature = Math.round(response.data.main.temp);
+  let temperatureFeel = Math.round(response.data.main.feels_like);
+  let feelsLike = document.querySelector("#feels-like");
+  let humidityData = response.data.main.humidity;
+  let humidity = document.querySelector("#humidity");
+  let tempMaxData = response.data.main.temp_max;
+  let maxTemp = document.querySelector("#max-temp");
+  let minTempData = Math.round(response.data.main.temp_min);
+  let tempMin = document.querySelector("#min-temp");
+  let windData = response.data.wind.speed;
+  let wind = document.querySelector("#wind");
   console.log(temperature);
   console.log(response);
+  wind.innerHTML = `${windData}m/sec`;
+  tempMin.innerHTML = `${minTempData}°C`;
+  maxTemp.innerHTML = `${tempMaxData}°C`;
+  humidity.innerHTML = `${humidityData}%`;
+  feelsLike.innerHTML = `${temperatureFeel}°C`;
   temperatureNow.innerHTML = `${temperature}°C`;
 }
 function searchCity(city) {
@@ -48,12 +63,25 @@ function searchCity(city) {
 }
 
 //geolocation
-
 function currentLocation(response) {
   let city = document.querySelector("#current-city");
   let temperature = document.querySelector("#temperature");
   console.log(response);
   let CurrentTemperature = Math.round(response.data.main.temp);
+  let feelsLikeData = Math.round(response.data.main.feels_like);
+  let feelsLike = document.querySelector("#feels-like");
+  let humidityData = response.data.main.humidity;
+  let tempMaxData = Math.round(response.data.main.temp_max);
+  let maxTemp = document.querySelector("#max-temp");
+  let minTempData = Math.round(response.data.main.temp_min);
+  let tempMin = document.querySelector("#min-temp");
+  let windData = response.data.wind.speed;
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = `${windData}m/sec`;
+  tempMin.innerHTML = `${minTempData}°C`;
+  maxTemp.innerHTML = `${tempMaxData}°C`;
+  humidity.innerHTML = `${humidityData}%`;
+  feelsLike.innerHTML = `${feelsLikeData}°C`;
   city.innerHTML = `${response.data.name}`;
   temperature.innerHTML = `${CurrentTemperature}°C`;
 }
