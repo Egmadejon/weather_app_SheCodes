@@ -19,7 +19,6 @@ if (minutes < 10) {
   minutes = `${minutes}`;
 }
 displayingDate.innerHTML = `${day} ${hour}:${minutes}`;
-//defaul day (zurich city)
 //form
 function changeCity(event) {
   event.preventDefault();
@@ -46,8 +45,13 @@ function showTemp(response) {
   let tempMin = document.querySelector("#min-temp");
   let windData = response.data.wind.speed;
   let wind = document.querySelector("#wind");
+  let iconImage = document.querySelector("#icon");
   console.log(temperature);
   console.log(response);
+  iconImage.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
   wind.innerHTML = `${windData}m/sec`;
   tempMin.innerHTML = `${minTempData}°C`;
   maxTemp.innerHTML = `${tempMaxData}°C`;
@@ -65,7 +69,7 @@ function searchCity(city) {
 //geolocation
 function currentLocation(response) {
   let city = document.querySelector("#current-city");
-  let temperature = document.querySelector("#temperature");
+  let temperatureGeol = document.querySelector("#temperature");
   console.log(response);
   let CurrentTemperature = Math.round(response.data.main.temp);
   let feelsLikeData = Math.round(response.data.main.feels_like);
@@ -77,13 +81,18 @@ function currentLocation(response) {
   let tempMin = document.querySelector("#min-temp");
   let windData = response.data.wind.speed;
   let wind = document.querySelector("#wind");
+  let iconImage = document.querySelector("#icon");
   wind.innerHTML = `${windData}m/sec`;
   tempMin.innerHTML = `${minTempData}°C`;
   maxTemp.innerHTML = `${tempMaxData}°C`;
   humidity.innerHTML = `${humidityData}%`;
   feelsLike.innerHTML = `${feelsLikeData}°C`;
   city.innerHTML = `${response.data.name}`;
-  temperature.innerHTML = `${CurrentTemperature}°C`;
+  temperatureGeol.innerHTML = `${CurrentTemperature}°C`;
+  iconImage.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 function triggerTheRequest() {
   navigator.geolocation.getCurrentPosition(retrievePosition);
